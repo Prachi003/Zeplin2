@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_header_bg"
+        android:orientation="vertical"
+        android:id="@+id/llHomeheader">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_arrow_icon" />
+                <TextView
+                    android:id="@+id/tvWishList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:gravity="center"
+                    android:text="Coats and Jackets"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopping_bag_icon"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/bag_icon"/>
+            <ImageView
+                android:id="@+id/ivFilterIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/filter_icon"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/bag_icon"/>
+        </RelativeLayout>
+        <android.support.v7.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:searchIcon="@drawable/find_icon"
+            app:queryHint="Search here for the product" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/home_search_bg">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/find_icon"
+                    android:rotationY="180" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Here for Products......."
+                    android:background="@drawable/home_search_bg"
+                    android:textColorHint="@color/search_icon"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/search_icon" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivSort"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sort_icon"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/sort_circle_bg"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+</LinearLayout>

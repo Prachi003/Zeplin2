@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_10sdp">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Pearle Desrosier "
+                android:fontFamily="@font/ibmplexsans_semibold"
+                android:textColor="@color/another_black"
+                android:textSize="@dimen/_11sdp"/>
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:lineSpacingExtra="5dp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,Bangalore"/>
+            <TextView
+                android:id="@+id/tvPinCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="PIN CODE - 560016"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/another_black"/>
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="1234567898"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/another_black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/delete_icon"
+                android:layout_marginRight="@dimen/_5sdp"/>
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/edit_blak_icon"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#cccccc"/>
+</RelativeLayout>

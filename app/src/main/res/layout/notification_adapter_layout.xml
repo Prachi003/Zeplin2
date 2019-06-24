@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f8f8f8">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_15sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvItemHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beware of fake Orders"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:textSize="@dimen/_12sdp"/>
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:07 AM"
+                    android:fontFamily="@font/ibmplexsans_light"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#828282"
+                    android:textSize="@dimen/_10sdp"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvItemDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="Beware of fake orders and fraudalent tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#828282"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_below="@+id/linearLayout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/dress2"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:background="@drawable/notification_image_border"/>
+
+</RelativeLayout>

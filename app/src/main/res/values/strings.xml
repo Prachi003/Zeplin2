@@ -1,0 +1,111 @@
+<resources>
+
+
+    <string name="facebook_app_id">837920779902244</string>
+
+    <string name="app_name">Lasross</string>
+    <string name="sign_in_with">Sign In With</string>
+    <string name="sign_up_with">Sign Up With</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="change_pass">Change Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="add_address">Add Address</string>
+    <string name="address">Address</string>
+    <string name="plan">Plan</string>
+    <string name="update">Update</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="house_no">House Number</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="pin_code">PIN Code</string>
+    <string name="email_id">Email ID</string>
+    <string name="send">Send</string>
+    <string name="add_cart">Add Card</string>
+
+    <string name="free">Free</string>
+    <string name="golden_plan">Golden"</string>
+    <string name="silver_plan">  Silver </string>
+
+    <string name="no_discount">No Discount</string>
+    <string name="no_free_shipping">No Free shipping</string>
+    <string name="free_shipping">Free shipping</string>
+    <string name="subscribe">Subscribe</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="up_to_50off">Up to 50% OFF !</string>
+    <string name="sort_by">SORT BY</string>
+
+    <string name="sort_default">Default Sorting</string>
+    <string name="sort_popularity">Sort By Popularity</string>
+    <string name="sort_rating">Sort By Average Rating</string>
+    <string name="sort_latest">Sort By Latest</string>
+    <string name="sort_low_high">Sort By Price:Low To High</string>
+    <string name="sort_high_low">Sort By Price:High To Low</string>
+
+    <string name="my_orders">My Orders</string>
+    <string name="all_reviews">All Reviews</string>
+    <string name="wish_list">Wishlist</string>
+    <string name="order_detail">Order Details</string>
+    <string name="filters">Filters</string>
+    <string name="tracking_details">Tracking Details</string>
+    <string name="my_cart">My Cart</string>
+    <string name="setting">Settings</string>
+    <string name="my_address">My Addresses</string>
+    <string name="contact_us">Contact Us</string>
+
+    <string name="accounts">Accounts</string>
+    <string name="notifications">Notifications</string>
+    <string name="more">More</string>
+
+    <string name="large">large (l)</string>
+    <string name="medium">Medium (m)</string>
+    <string name="xlarge">Xtralarge (xl)</string>
+    <string name="small">Small (sm)</string>
+
+    <string name="blue">Blue</string>
+    <string name="green">Green</string>
+    <string name="grey">Grey</string>
+    <string name="orange">Orange</string>
+    <string name="red">Red</string>
+
+    <string name="size">SIZE</string>
+    <string name="color_available">COLOR AVAILAIBLE</string>
+    <string name="view_similar">VIEW SIMILAR</string>
+    <string name="description">DESCRIPTION</string>
+
+    <string name="reset_pwd">Reset Password</string>
+    <string name="old_pwd">Old Password</string>
+    <string name="new_pwd">New Password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="done">Done</string>
+
+    <string name="default_web_client_id" translatable="false">1005684995117-8077mloqlg45si9fkgvtevbh0aeikbec.apps.googleusercontent.com</string>
+
+    <!--Image Cropper-->
+    <string name="pick_image_intent_text">Choose an image</string>
+    <string name="crop_image_activity_title">Crop Image</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <!--<string name="pick_image_intent_chooser_title">Select source</string>-->
+    <string name="result_image_desc">crop result</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+
+    <!--
+        1005684995117-8077mloqlg45si9fkgvtevbh0aeikbec.apps.googleusercontent.com
+    -->
+
+</resources>
+
+
+<!--
+  client secret  _pqqTVdI6A3e65-dC26XG9OK
+-->

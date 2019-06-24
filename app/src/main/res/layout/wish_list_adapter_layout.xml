@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/dress1"/>
+        <LinearLayout
+            android:id="@+id/llMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemNameVariety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="COATS AND JACKETS"
+                android:textColor="#999999"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="Jackets Shinny Fit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <RatingBar
+                android:id="@+id/myRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1"
+                android:theme="@style/RatingBar" />
+
+            <View
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height=".5dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#cccccc" />
+
+            <TextView
+                android:id="@+id/tvItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/ibmplexsans_semibold"
+                android:text="$ 39.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/llMiddle">
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"/>
+            <TextView
+                android:id="@+id/tvMoveToBag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="MOVE TO BAG"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="#ff6230"
+                android:padding="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/move_to_bag_bg"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#cccccc"/>
+
+</LinearLayout>

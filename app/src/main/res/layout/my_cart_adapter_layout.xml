@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp">
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/dress1"/>
+        <LinearLayout
+            android:id="@+id/llMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemNameVariety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="COATS AND JACKETS"
+                android:textColor="#999999"
+                android:textSize="@dimen/_7sdp" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="Jackets Shinny Fit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvItemSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:text="Large"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibmplexsans_light"
+                    android:text="Color"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/_8sdp"/>
+                <ImageView
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:src="@drawable/brown_circle_icon"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_7sdp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_semibold"
+                android:text="$ 39.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/llMiddle">
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@drawable/edittext_bg">
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_8sdp"
+                    android:background="@drawable/add_icon"/>
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="#828282"/>
+                <TextView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_8sdp"/>
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="#828282"/>
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_8sdp"
+                    android:background="@drawable/minus_icon"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#cccccc"/>
+
+</LinearLayout>

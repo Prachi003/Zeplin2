@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/ivHeaderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_icon"/>
+        <TextView
+            android:id="@+id/tvHeaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivHeaderImage"
+            android:text="Shop"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"/>
+        <ImageView
+            android:id="@+id/ivUpAndDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_arrow"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:background="#cccccc"
+        android:id="@+id/tvLine"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_15sdp"
+        android:background="#f8f8f8"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"
+        android:id="@+id/group_devider_layout"/>
+</LinearLayout>

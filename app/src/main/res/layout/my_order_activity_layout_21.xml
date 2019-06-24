@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/home_header_bg"
+        android:gravity="bottom">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/_10sdp">
+            <TextView
+                android:id="@+id/tvWishList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Orders"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/back_arrow_icon"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:drawablePadding="@dimen/_5sdp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bag_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvWishList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

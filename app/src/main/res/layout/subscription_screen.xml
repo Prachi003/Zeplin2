@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/sub_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/left_icon"
+                android:text="Subscription"
+                android:gravity="center"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:drawablePadding="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-95dp">
+            <LinearLayout
+                android:id="@+id/llLeftLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_minus20sdp">
+                <ImageView
+                    android:id="@+id/ivLeftImage"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/goldenplan_icon_black"
+                    android:background="@drawable/circular_side_bg" />
+                <TextView
+                    android:id="@+id/tvLeftText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/golden_plan"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:fontFamily="@font/ibmplexsans_regular" />
+                <TextView
+                    android:id="@+id/tvLeftPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:fontFamily="@font/ibmplexsans_regular" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llMiddleLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+                <ImageView
+                    android:id="@+id/ivMiddleImage"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:src="@drawable/free_icon_orange"
+                    android:background="@drawable/circular_main_bg" />
+                <TextView
+                    android:id="@+id/tvMiddleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/ibmplexsans_bold"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/tvMiddlePlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/ibmplexsans_bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llRightLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_minus20sdp">
+                <ImageView
+                    android:id="@+id/ivRightImage"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/silverplan_icon_black"
+                    android:background="@drawable/circular_side_bg" />
+                <TextView
+                    android:id="@+id/tvRightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Silver "
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/_28sdp"
+                    android:fontFamily="@font/ibmplexsans_regular"/>
+                <TextView
+                    android:id="@+id/tvRightPlan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan"
+                    android:layout_marginRight="@dimen/_34sdp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ibmplexsans_regular" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFreeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/free"
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="@font/ibmplexsans_bold"
+                android:textColor="@color/text_color"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_discount"
+                android:drawableLeft="@drawable/check_icon"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:padding="5dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_10sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_free_shipping"
+                android:drawableLeft="@drawable/check_icon"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:padding="5dp"
+                android:drawablePadding="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSilverDetails"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_40sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 250"
+                    android:textSize="@dimen/_20sdp"
+                    android:fontFamily="@font/ibmplexsans_semibold"
+                    android:textColor="@color/orange_forgot_password"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / Month"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount with silver obtain 10 per cent in all items"
+                android:drawableLeft="@drawable/check_icon"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:padding="5dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_10sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGoldenDetails"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_40sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 500"
+                    android:textSize="@dimen/_20sdp"
+                    android:fontFamily="@font/ibmplexsans_semibold"
+                    android:textColor="@color/orange_forgot_password"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / Month"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount with golden obtain 20 per cent in all items"
+                android:drawableLeft="@drawable/check_icon"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:padding="5dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_10sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free_shipping"
+                android:drawableLeft="@drawable/check_icon"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/ibmplexsans_light"
+                android:padding="5dp"
+                android:drawablePadding="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tvSubscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subscribe"
+        android:background="@drawable/tv_signin_bg"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:fontFamily="@font/ibmplexsans_semibold" />
+</RelativeLayout>

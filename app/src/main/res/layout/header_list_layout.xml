@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/fullLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/edittext_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp">
+
+                <com.mindiii.lasross.helper.RoundRectCornerImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dress2"
+                    android:scaleType="fitXY"
+                    android:tint="#6A000000" />
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/favourite_bg"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/favourite_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvItemNameVariety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="COATS AND JACKETS"
+                android:textColor="#999999"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibmplexsans_regular"
+                android:text="Jackets Shinny Fit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                                                                        >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:text="£ "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp" />
+                <TextView
+                    android:id="@+id/tvItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibmplexsans_regular"
+                    android:text="39.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@drawable/green_box"
+        android:gravity="center"
+        android:text="-20%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8sdp" />
+
+</RelativeLayout>

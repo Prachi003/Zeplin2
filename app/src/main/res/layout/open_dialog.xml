@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvClose"
+        android:text="@string/sort_by"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:fontFamily="@font/ibmplexsans_regular"
+        android:textColor="@color/sort_by_color" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#cccccc"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/rbDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_default"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"/>
+
+        <RadioButton
+            android:id="@+id/rbPoplarity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_popularity"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"
+             />
+
+        <RadioButton
+            android:id="@+id/rbRating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:fontFamily="@font/ibmplexsans_regular"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_rating"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"
+            />
+
+        <RadioButton
+            android:id="@+id/rbLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_latest"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"
+            />
+
+        <RadioButton
+            android:id="@+id/rbLowHigh"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_low_high"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"
+            />
+
+        <RadioButton
+            android:id="@+id/rbHighLow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:text="@string/sort_high_low"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/_12sdp"
+            style="@style/MyRadioButtonStyle"
+            />
+    </RadioGroup>
+
+</LinearLayout>
