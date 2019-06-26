@@ -158,6 +158,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         llGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.e("yaha toh aaya","its working");
                 Intent intent = googleSignInClient.getSignInIntent();
                 startActivityForResult(intent, REQ_CODE_GOOGLE);
             }
@@ -230,7 +231,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         printHashKey(this);
 
         etEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
@@ -344,12 +344,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             JSONObject picture = jsonObject.getJSONObject("picture");
             JSONObject data = picture.getJSONObject("data");
             String url = data.getString("url");
-
             Log.e("URL of picture is ", url);
             Log.e("name of user is ", name);
             etEmail.setText(name);
-
-
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
 
@@ -470,72 +467,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 });
     }
 
-  /*  private void validateData(final String email, final String pass, final View v) {
-
-        progressDialog.show();
-        progressDialog.setMessage("loading.....");
-
-
-        AndroidNetworking.post("http://dev.lasross.com/api/service/login")
-                .addBodyParameter("email", email)
-                .addBodyParameter("password", pass)
-                .setTag(this)
-                .setPriority(Priority.MEDIUM)
-                .build()
-                .getAsJSONObject(new JSONObjectRequestListener() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            String status = response.getString("status");
-                            if (status.equals("ok")) {
-                                String cookie = response.getString("cookie");
-                                JSONObject object = response.getJSONObject("user");
-
-                                String id = object.getString("id");
-                                String firstname = object.getString("firstname");
-                                String lastname = object.getString("lastname");
-                                String email = object.getString("email");
-                                String profile_image = object.getString("avatar_url_full");
-                                String description = object.getString("description");
-
-                                UserInfo userInfo = new UserInfo();
-                                userInfo.cookie = cookie;
-                                userInfo.first_name = firstname;
-                                userInfo.email = email;
-                                userInfo.last_name = lastname;
-                                userInfo.profile_image = profile_image;
-                                userInfo.description = description;
-
-                                session.createSession(userInfo);
-
-                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                                finish();
-                            } else if (status.equals("error")) {
-                                progressDialog.dismiss();
-                                String error = response.getString("error");
-                                Toast.makeText(LoginActivity.this, error, Toast.LENGTH_LONG).show();
-                            }
-
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-                        progressDialog.dismiss();
-                        Log.e("error", anError + "");
-                        Util.parseError(getBaseContext(), anError);
-
-                        if (anError.getErrorCode() == 0) {
-                            Toast.makeText(LoginActivity.this, "Internate Connetion is slow", Toast.LENGTH_LONG).show();
-                        } else
-                            Toast.makeText(LoginActivity.this, "email does not exist", Toast.LENGTH_LONG).show();
-                    }
-                });
-    }*/
-
-
     private void validateDataForLoginApi(final String email, final String pass, final View v) {
 
         progressDialog.show();
@@ -597,7 +528,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 Util.parseError(getBaseContext(), anError);
 
                 if (anError.getErrorCode() == 0) {
-                    Toast.makeText(LoginActivity.this, "Internate Connetion is slow", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Internet Connection is slow", Toast.LENGTH_LONG).show();
                 } else
                     Toast.makeText(LoginActivity.this, "email does not exist", Toast.LENGTH_LONG).show();
 
@@ -612,24 +543,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     private boolean isValidPass(String pass) {
         return pass.length() > 5;
     }
-
-   /* @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == RC_SIGN_IN) {
-            // The Task returned from this call is always completed, no need to attach
-            // a listener.
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }
-        else {
-            callbackManager.onActivityResult(requestCode, resultCode, data);
-
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-
-    }*/
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.d("Request code ", "onActivityResult:" + requestCode + ":" + resultCode + ":" + data);

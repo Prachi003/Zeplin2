@@ -100,7 +100,6 @@
                         android:layout_height="match_parent"
                         android:padding="@dimen/_5sdp"
                         android:layout_weight="1"
-                        android:onClick="gmailLogin"
                         android:background="@drawable/edittext_bg"
                         android:layout_marginLeft="10dp"
                         android:gravity="center">
