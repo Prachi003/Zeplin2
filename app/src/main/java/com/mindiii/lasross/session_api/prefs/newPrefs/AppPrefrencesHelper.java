@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
 import com.mindiii.lasross.loginregistration.LoginActivity;
 import com.mindiii.lasross.sessionNew.UserInfo;
 
+import java.util.HashMap;
+
 public class AppPrefrencesHelper implements PreferencesHelper{
 
 
@@ -21,6 +23,9 @@ public class AppPrefrencesHelper implements PreferencesHelper{
     private static SharedPreferences.Editor editorRem;
 
     private static final String IS_LOGGEDIN = "isLoggedIn";
+
+    private static final String AUTH_TOKEN = "authToken";
+
     private static final String Filter_id = "filterId";
     public SharedPreferences myprefRemember;
     private static final String PREF_NAMELAN = "lan";
@@ -40,6 +45,7 @@ public class AppPrefrencesHelper implements PreferencesHelper{
     public void createSession(UserInfo userInfo) {
         editor.putString("userId", userInfo.userId);
         editor.putString("cookie", userInfo.cookie);
+        editor.putString("authToken", userInfo.cookie);
         editor.putString("first_name", userInfo.first_name);
         editor.putString("last_name", userInfo.last_name);
         editor.putString("email", userInfo.email);
@@ -101,6 +107,22 @@ public class AppPrefrencesHelper implements PreferencesHelper{
 
     public String getPassword() {
         return myprefRemember.getString("password", "");
+    }
+
+
+
+    /*@Override
+    public HashMap<String, String> getHeader() {
+        return sharedPreferences.getString("authToken", "");
+    }*/
+
+
+    @Override
+    public HashMap<String, String> getHeader() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("authToken", sharedPreferences.getString(AUTH_TOKEN, ""));
+        return hashMap;
+
     }
 
     public void logout() {

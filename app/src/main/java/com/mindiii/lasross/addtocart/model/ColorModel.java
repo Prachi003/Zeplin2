@@ -2,13 +2,13 @@ package com.mindiii.lasross.addtocart.model;
 
 public class ColorModel {
 
-    String colorCode;
+    int colorCode;
 
-    public String getColorCode() {
-        return colorCode;
+    public ColorModel(int colorCode) {
+        this.colorCode = colorCode;
     }
 
-    public void setColorCode(String colorCode) {
-        this.colorCode = colorCode;
+    public int getColorCode() {
+        return colorCode;
     }
 }

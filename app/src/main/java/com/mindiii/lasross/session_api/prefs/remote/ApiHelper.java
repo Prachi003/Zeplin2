@@ -14,4 +14,6 @@ public interface ApiHelper {
 
     ANRequest getMenuList(HashMap<String, String> params);
 
+    ANRequest getProductDetail(HashMap<String, String>  header,HashMap<String, String> params);
+
 }

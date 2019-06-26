@@ -339,15 +339,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     private void validateDataFacebook(final JSONObject jsonObject) {
         try {
-            /*
-            {Response:  responseCode: 200, graphObject:
-            {"name":"Jack Darko","email":"jack.darko098@gmail.com","id":"490961721711094",
-            "picture":{"data":{"height":50,"is_silhouette":false,
-            "url":"https:\/\/platform-lookaside.fbsbx.com\/platform\/profilepic\/?asid=490961721711094&height=
-            50&width=50&ext=1562834406&hash=AeQrIs9lUc5P-hwC","width":50}}},
-            error: null}
-            */
-
             String name = jsonObject.getString("name");
             String email = jsonObject.getString("email");
             JSONObject picture = jsonObject.getJSONObject("picture");

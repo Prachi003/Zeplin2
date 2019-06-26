@@ -1,9 +1,6 @@
 package com.mindiii.lasross.activity;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +15,7 @@ import androidx.annotation.RequiresApi;
 
 import com.mindiii.lasross.R;
 import com.mindiii.lasross.adapter.UserProfileAdapter;
+import com.mindiii.lasross.editprofile.EditProfileActivity;
 import com.mindiii.lasross.model.UserProfileModel;
 import com.mindiii.lasross.sessionNew.Session;
 import com.squareup.picasso.Picasso;

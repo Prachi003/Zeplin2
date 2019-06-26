@@ -1,4 +1,4 @@
-package com.mindiii.lasross.activity;
+package com.mindiii.lasross.editprofile;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -36,6 +36,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.crashlytics.android.Crashlytics;
 import com.mindiii.lasross.R;
+import com.mindiii.lasross.activity.UserProfileActivity26;
 import com.mindiii.lasross.helper.Constant;
 import com.mindiii.lasross.helper.Util;
 import com.mindiii.lasross.loginregistration.LoginActivity;

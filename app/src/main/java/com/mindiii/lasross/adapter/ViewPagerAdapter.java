@@ -14,11 +14,11 @@ import com.squareup.picasso.Picasso;
 public class ViewPagerAdapter extends PagerAdapter {
 
     private  int[] layouts;
-    private int[] images;
+    private String[] images;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public ViewPagerAdapter(int[] images, Context context) {
+    public ViewPagerAdapter(String[] images, Context context) {
         this.images = images;
         this.context = context;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -42,10 +42,21 @@ public class ViewPagerAdapter extends PagerAdapter {
 
         final ImageView img =  view.findViewById(R.id.ivImage);
 
-        Picasso.with(context)
-                .load(images[position])
-                .resize(600, 830)
-                .into(img);
+        if (images[position].isEmpty()) {
+            Picasso.with(context)
+                    .load(R.drawable.dress2)
+                    .resize(600, 830)
+                    .into(img);
+            //img.setImageResource(R.drawable.dress2);
+        }
+        else {
+            Picasso.with(context)
+                    .load(images[position])
+                    .resize(600, 830)
+                    .into(img);
+        }
+
+
 
         container.addView(view);
         return view;

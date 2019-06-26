@@ -57,6 +57,16 @@ public class AppApiHelper implements ApiHelper{
                 .build();
     }
 
+    @Override
+    public ANRequest getProductDetail(HashMap<String, String> header,HashMap<String, String> params) {
+        return AndroidNetworking.post(WebServices.GET_PRODUCT_DETAIL)
+                .addHeaders(header)
+                .addBodyParameter(params)
+                .setTag(TAG)
+                .setPriority(Priority.MEDIUM)
+                .build();
+    }
+
 
 
     /*@Override

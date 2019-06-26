@@ -14,4 +14,6 @@ public class WebServices {
 
     static final String GET_MENU_LIST = BuildConfig.BASE_URL + "product/menuList";
 
+    static final String GET_PRODUCT_DETAIL = BuildConfig.BASE_URL + "product/productDetail";
+
 }

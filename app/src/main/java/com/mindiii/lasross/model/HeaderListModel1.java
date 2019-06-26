@@ -6,12 +6,14 @@ public class HeaderListModel1 {
     String itemName;
     String itemPrice;
     String picURL;
+    String id;
 
-    public HeaderListModel1(String itemNameVariety, String itemName, String itemPrice, String picURL) {
+    public HeaderListModel1(String itemNameVariety, String itemName, String itemPrice, String picURL, String id) {
         this.itemNameVariety = itemNameVariety;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.picURL = picURL;
+        this.id = id;
     }
 
     public String getItemNameVariety() {
@@ -28,5 +30,9 @@ public class HeaderListModel1 {
 
     public String getPicURL() {
         return picURL;
+    }
+
+    public String getId() {
+        return id;
     }
 }

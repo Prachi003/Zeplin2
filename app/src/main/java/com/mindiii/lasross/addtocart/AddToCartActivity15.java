@@ -24,7 +24,7 @@ public class AddToCartActivity15 extends AppCompatActivity {
     ViewPager viewPager;
     TextView tvStartNo;
     private int[] layouts = {R.layout.swipe_layout_1,R.layout.swipe_layout_2,R.layout.swipe_layout_3};
-    private int[] images = {R.drawable.splash_bg,R.drawable.dress1,R.drawable.dress2};
+    //private int[] images = {R.drawable.splash_bg,R.drawable.dress1,R.drawable.dress2};
     private ViewPagerAdapter viewPagerAdapter;
     LinearLayout dotLayout;
     private ImageView[] ivRhombus;
@@ -59,7 +59,7 @@ public class AddToCartActivity15 extends AppCompatActivity {
 
         tvStartNo.setText("("+30+")");
 
-        viewPagerAdapter = new ViewPagerAdapter(images,this);
+        //viewPagerAdapter = new ViewPagerAdapter(images,this);
         viewPager.setAdapter(viewPagerAdapter);
 
         dotLayout = findViewById(R.id.dotLayout);

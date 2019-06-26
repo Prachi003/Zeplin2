@@ -58,7 +58,7 @@ public class HeaderListAdapter extends RecyclerView.Adapter<HeaderListAdapter.Ho
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder holder, int i) {
+    public void onBindViewHolder(@NonNull Holder holder, final int i) {
 
         if(holder.view_type == TYPE_LIST)
         {
@@ -70,8 +70,7 @@ public class HeaderListAdapter extends RecyclerView.Adapter<HeaderListAdapter.Ho
             holder.fullLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    headerInterface.onClickListener();
-                    //context.startActivity(new Intent(context, AddToCartActivity15.class));
+                    headerInterface.onClickListener(i);
                 }
             });
             if (itemList.getPicURL().isEmpty()) {

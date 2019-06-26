@@ -113,7 +113,7 @@
             android:name="com.mindiii.lasross.activity.UserDetailActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.mindiii.lasross.activity.EditProfileActivity"
+            android:name="com.mindiii.lasross.editprofile.EditProfileActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.mindiii.lasross.activity.TrackingDetailsActivity23"

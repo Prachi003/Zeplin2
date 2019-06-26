@@ -97,10 +97,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     Session session;
     ImageView ivMenu;
     android.support.v7.app.ActionBarDrawerToggle actionBarDrawerToggle;
-
-
     TextView tvUserName;
-
     ImageView ivUserPic, ivSort;
 
     @Override
@@ -139,7 +136,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         Log.v("session2", "" + session.getFirst_name());
 
         progressDialog = new ProgressDialog(this);
-
 
         ///////////////////HEADER ADAPTER/////////////////////////
         headerAdapter();
@@ -314,35 +310,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 });
     }
 
-    private void setHeaderAdapterData() {
-
-        headerListAdapter = new HeaderListAdapter(headerListModel1s, this, new HeaderInterface() {
-            @Override
-            public void onClickListener() {
-                startActivity(new Intent(HomeActivity.this, AddToCartLongActivity17.class));
-            }
-        });
-
-        GridLayoutManager mLayoutManager = new GridLayoutManager(this, 2);
-        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int position) {
-                switch (headerListAdapter.getItemViewType(position)) {
-                    case HeaderListAdapter.TYPE_HEAD:
-                        return 2;
-
-                    case HeaderListAdapter.TYPE_LIST:
-                        return 1;
-
-                    default:
-                        return 1;
-                }
-            }
-        });
-        rvListUp.setLayoutManager(mLayoutManager);
-        rvListUp.setAdapter(headerListAdapter);
-    }
-
     private void headerAdapter() {
         progressDialog.show();
         progressDialog.setMessage("loading.....");
@@ -357,6 +324,8 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 try {
                     jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
+                    String id = "";
+                    String featuredImage = "";
 
                     if (status.equals("ok")) {
                         progressDialog.dismiss();
@@ -364,19 +333,19 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                         JSONArray jsonArray = jsonObject.getJSONArray("products");
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                            id = jsonObject1.getString("ID");
                             String post_title = jsonObject1.getString("post_title");
-                            String featuredImage = jsonObject1.getString("featuredImage");
+                            featuredImage = jsonObject1.getString("featuredImage");
                             String price = jsonObject1.getString("price");
                             String category = jsonObject1.getString("category");
                             HeaderListModel1 itemList = new HeaderListModel1(
                                     category,
                                     post_title,
                                     price,
-                                    featuredImage);
+                                    featuredImage,
+                                    id);
                             headerListModel1s.add(itemList);
-                            //Log.e("image is ",featuredImage);
                         }
-
                         setHeaderAdapterData();
                     }
 
@@ -384,7 +353,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
@@ -394,10 +362,38 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         });
     }
 
-    private void setFooterAdapterData() {
-        footerListAdapter = new FooterListAdapter(footerLists, this);
-        rvListDown.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        rvListDown.setAdapter(footerListAdapter);
+    private void setHeaderAdapterData() {
+
+        headerListAdapter = new HeaderListAdapter(headerListModel1s, this, new HeaderInterface() {
+            @Override
+            public void onClickListener(int i) {
+
+                String picUrl = headerListModel1s.get(i-1).getPicURL();
+                String id = headerListModel1s.get(i-1).getId();
+
+                Intent intent = new Intent(new Intent(HomeActivity.this, AddToCartLongActivity17.class));
+                intent.putExtra("id", id);
+                intent.putExtra("featuredImage", picUrl);
+                startActivity(intent);
+            }
+        });
+
+        GridLayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                switch (headerListAdapter.getItemViewType(position)) {
+                    case HeaderListAdapter.TYPE_HEAD:
+                        return 2;
+                    case HeaderListAdapter.TYPE_LIST:
+                        return 1;
+                    default:
+                        return 1;
+                }
+            }
+        });
+        rvListUp.setLayoutManager(mLayoutManager);
+        rvListUp.setAdapter(headerListAdapter);
     }
 
     private void footerAdapter()    {
@@ -451,6 +447,13 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
 
 
     }
+
+    private void setFooterAdapterData() {
+        footerListAdapter = new FooterListAdapter(footerLists, this);
+        rvListDown.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rvListDown.setAdapter(footerListAdapter);
+    }
+
 
     private void openDialog() {
 
@@ -605,9 +608,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void menuExpandableApi() {
-
-        String subMenu = "";
-
         progressDialog.show();
         progressDialog.setMessage("loading.....");
 

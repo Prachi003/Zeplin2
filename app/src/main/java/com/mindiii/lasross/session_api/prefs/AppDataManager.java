@@ -48,6 +48,16 @@ public class AppDataManager implements DataManager {
         return mApiHelper.getMenuList(params);
     }
 
+    @Override
+    public ANRequest getProductDetail(HashMap<String, String> header, HashMap<String, String> params) {
+        return mApiHelper.getProductDetail(header,params);
+    }
+
+    @Override
+    public HashMap<String, String> getHeader() {
+        return mPreferencesHelper.getHeader();
+    }
+
 
 
    /* @Override
